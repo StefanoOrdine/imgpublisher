@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'haml'
-require 'pry'
+
+set :environment, :production
 
 get '/' do
   file = File.new("img_url.txt", "r")
