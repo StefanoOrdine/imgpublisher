@@ -1,5 +1,10 @@
-:javascript
-  setTimeout(function(){
-   window.location.reload(true);
-  }, 10000);
-%img{src: "#{img_src}", width: 1920, height: 1080}
+!!! 5
+%html
+  :javascript
+    var ws = new WebSocket('ws://localhost:4567');
+    ws.onopen = function()  { };
+    ws.onclose = function()  { }
+    ws.onmessage = function(m) {
+      document.getElementById('image_tag').src = m.data;
+    };
+  %img#image_tag{src: "#{img_src}", width: 1920, height: 1080}
