@@ -1,5 +1,9 @@
 imgpublisher
 ============
+Just a silly tool to share images on a monitor in the office.
+With websockets support.
+For the lulz.
+
 
 usage
 -----
