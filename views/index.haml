@@ -1,12 +1,7 @@
 !!! 5
 %html
-  :javascript
-    var ws = new WebSocket('ws://localhost:4567');
-    ws.onopen = function()  { };
-    ws.onclose = function()  { }
-    ws.onmessage = function(m) {
-      document.getElementById('image_tag').src = m.data;
-      document.getElementById('sound').Play();
-    };
-  %img#image_tag{src: "#{img_src}", width: 1920, height: 1080}
-  %embed#sound{src: "bell.wav", autostart:"true", width:"0", height:"0", enablejavascript:"true"}
+  %script{ :type => "text/javascript", :src => "/javascripts/jquery-2.1.0.min.js" }
+  %script{ :type => "text/javascript", :src => "/javascripts/websockets.js" }
+
+  %img#image_tag{ src: "#{img_src}" , width: 1920, height: 1080}
+  %embed#sound{ src: "bell.wav", autostart:"false", width:"0", height:"0", enablejavascript:"true" }

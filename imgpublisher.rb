@@ -28,7 +28,6 @@ end
 
 get '/publish_img' do
   haml :publish_img
-
 end
 
 get '/push_img' do
