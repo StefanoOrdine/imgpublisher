@@ -3,7 +3,6 @@ $(function() {
   var ws = null;
 
   $(document).ready(function() {
-    alert('ready');
     ws = new WebSocket('ws://localhost:4567');
     ws.onopen = function() { };
     ws.onmessage = function(m) {
