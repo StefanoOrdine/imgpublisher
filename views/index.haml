@@ -1,7 +1,7 @@
 !!! 5
 %html
   :javascript
-    var ws = new WebSocket('ws://localhost:4567/#{params[:scope]}/');
+    var ws = new WebSocket('ws://imgpblshr.herokuapp.com/#{params[:scope]}/');
     ws.onopen = function() { };
     ws.onclose = function() { };
     ws.onmessage = function(m) {
